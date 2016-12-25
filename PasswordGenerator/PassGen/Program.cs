@@ -10,7 +10,7 @@ namespace AghasPasswordGenerator
     {
         static void Main(string[] args)
         {
-            var coder = new Coder();
+            var coder = new Coder(80);
             Console.WriteLine(coder.Code);
 
             Console.ReadKey();
