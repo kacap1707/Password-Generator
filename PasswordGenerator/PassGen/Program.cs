@@ -18,7 +18,7 @@ namespace AghasPasswordGenerator
             Console.WriteLine(pass.ToString());
             Console.WriteLine(pass.ToString().Length);
 
-            var p1 = new Password(PasswordOptions.OnlyLowerCase, 16);
+            var p1 = new Password(PasswordOptions.OnlyAlphabet, 16);
             Console.WriteLine(p1.ToString());
             Console.WriteLine(p1.ToString().Length);
 

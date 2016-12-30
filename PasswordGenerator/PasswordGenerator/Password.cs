@@ -18,17 +18,18 @@ namespace PasswordGenerator
     public class Password
     {
         private readonly string password;
-
+        #region Constants
         private const string Alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string AlphaNumericLower = "0123456789abcdefghijklmnopqrstuvwxyz";
         private const string AlphaNumericWithUpperCase = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string AlphaNumericUpper = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         private const string SpecialCharacters = " !#$%&'()*+,-./:;<=>?@[\"]^_`\\{|}~";
         private const string Numbers = "0123456789";
+        #endregion
         #region Constructors
         public Password()
         {
-            password = NewPassword(PasswordOptions.AtLeastOneDigitOneSpecialCharacter).ToString();
+            password = NewPassword().ToString();
         }
         public Password(int length)
         {
@@ -46,19 +47,16 @@ namespace PasswordGenerator
         {
             password = NewPassword(passOpt, length).ToString();
         }
-#endregion
-        public static Password NewPassword(PasswordOptions option, int length = 32)
+        #endregion
+        public static Password NewPassword(PasswordOptions option = PasswordOptions.AtLeastOneDigitOneSpecialCharacter, int length = 32)
         {
             using (var rng = new RNGCryptoServiceProvider())
             {
                 var data = new byte[4];
-                var d2 = new byte[4];
                 rng.GetBytes(data);
-                rng.GetBytes(d2);
                 var seed = BitConverter.ToInt32(data, 0);
-                var seed2 = BitConverter.ToInt32(d2, 0);
                 var rnd = new Random(seed);
-                var r2 = new Random(seed2);
+
                 var passChars = new char[length];
 
                 var sb = new StringBuilder();
@@ -70,9 +68,9 @@ namespace PasswordGenerator
                     if (option == PasswordOptions.OnlyAlphabet) sb.Append(Alphabet[rnd.Next(0, 52)]);
                     if (option == PasswordOptions.AtLeastOneDigitOneSpecialCharacter)
                     {
-                        if (sb.Length == rnd.Next(sb.Length, length+1)) sb.Append(SpecialCharacters[rnd.Next(0, 33)]);
-                        else if (sb.Length == r2.Next(sb.Length, length+1)) sb.Append(Numbers[rnd.Next(0, 10)]);
-                        else sb.Append(Alphabet[rnd.Next(0,52)]);
+                        if (sb.Length == rnd.Next(sb.Length, length + 1)) sb.Append(SpecialCharacters[rnd.Next(0, 33)]);
+                        else if (sb.Length == rnd.Next(sb.Length, length + 1)) sb.Append(Numbers[rnd.Next(0, 10)]);
+                        else sb.Append(Alphabet[rnd.Next(0, 52)]);
                     }
                 }
 
