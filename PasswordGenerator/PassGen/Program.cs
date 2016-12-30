@@ -11,7 +11,7 @@ namespace AghasPasswordGenerator
     {
         static void Main(string[] args)
         {
-            var coder = new Coder(80);
+            var coder = new SimpleCoder(80);
             Console.WriteLine(coder.Code);
 
             var pass = new Password();

@@ -2,15 +2,15 @@
 
 namespace AghasPasswordGenerator
 {
-    public class Coder
+    public class SimpleCoder
     {
         public string Code { get; }
         #region Constructors
-        public Coder()
+        public SimpleCoder()
         {
             Code = GenerateCode();
         }
-        public Coder(int length)
+        public SimpleCoder(int length)
         {
             Code = GenerateCode(length);
         }
