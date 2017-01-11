@@ -18,4 +18,4 @@ e) var p4 = new Password(PasswordOptions.OnlyAlphabet); // finally, you can just
 As a choice, you can run the windows form application:
 ![Alt Text](https://raw.githubusercontent.com/kacap1707/Coder/master/1.jpg)
 ![ScreenShot](1.jpg)
-![ScreenShot](https://raw.github.com/kacap1707/Coder/master/C:\Users\HP\Desktop\1.jpg)
+![ScreenShot](https://raw.github.com/kacap1707/Coder/master/https://gyazo.com/ba9e8604b3f219e264c800f35c1359f5)
