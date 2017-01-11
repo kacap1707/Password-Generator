@@ -16,4 +16,4 @@ e) var p4 = new Password(PasswordOptions.OnlyAlphabet); // finally, you can just
 ```
 
 As a choice, you can run the windows form application:
-![ScreenShot](https://raw.githubusercontent.com/kacap1707/Coder/master/1.jpg)
+![Alt Text](https://raw.githubusercontent.com/kacap1707/Coder/master/1.jpg)
