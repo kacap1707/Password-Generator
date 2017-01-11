@@ -21,3 +21,7 @@ As a choice, you can run the windows form application:
 #### 1. Choose the password option you want
 #### 2. Select the desired password length
 #### 3. Click Generate button
+
+![2](https://cloud.githubusercontent.com/assets/22852258/21854334/c6df5614-d833-11e6-9c4d-b6a45ac7e6da.jpg)
+
+#### 4. Hit the "Copy to clipboard" button and paste it in your password storage
