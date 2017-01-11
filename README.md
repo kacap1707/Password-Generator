@@ -16,4 +16,4 @@ e) var p4 = new Password(PasswordOptions.OnlyAlphabet); // finally, you can just
 ```
 
 As a choice, you can run the windows form application:
-![alt tag](C:\Users\HP\Desktop\ba9e8604b3f219e264c800f35c1359f5.jpg)
+![alt tag](https://gyazo.com/ba9e8604b3f219e264c800f35c1359f5)
