@@ -14,3 +14,6 @@ d) var p3 = new Password("askd;fasfshdfksj 'l323;kj;adsfjk;"); // thus, you can 
 
 e) var p4 = new Password(PasswordOptions.OnlyAlphabet); // finally, you can just select the password option you like and get a 32                                                                      characters long password
 ```
+
+As a choice, you can run the windows form application:
+![alt tag](https://gyazo.com/cafce7b4bbdeb1174bfd02ed9a79f40c)
